@@ -3,12 +3,19 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="ultra"></ion-back-button>
     </ion-buttons>
-    <ion-title>Inventario</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="ion-justify-content-center" soze="10">
+        <ion-title>Inventario</ion-title>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
   <ion-list>
+
+
     <ion-item-sliding *ngFor="let product of products">
 
       <ion-item lines="inset" button [routerLink]="['/product-management', product.id]">
