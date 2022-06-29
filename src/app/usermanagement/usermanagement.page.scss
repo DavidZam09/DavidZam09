@@ -3,14 +3,21 @@ ul {
     padding: 0%;
     font-size: 20px;
     margin: auto;
-    
+
 }
 
-.content{
+.content {
     display: block;
     text-align: justify;
     position: absolute;
     left: 0;
     right: 0;
     top: 20%;
+}
+
+ion-title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: darkgreen;
+    text-align: center;
 }

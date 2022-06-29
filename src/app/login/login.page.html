@@ -1,24 +1,25 @@
-
 <ion-content>
-  <div class="content">
-    <div class="form">
-      <ion-title>Iniciar Sesion</ion-title>
-      <form class="ion-margin-top" (submit)="login()">
-        <ion-list>
-          <ion-item>
-            <ion-label position="floating" name="mail">Correo</ion-label>
-            <ion-input required name="mail" [(ngModel)]="credentials.user" type="email"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label name="password" position="floating">Contraseña</ion-label>
-            <ion-input required name="password" [(ngModel)]="credentials.password" type="password">
-            </ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-button (click)="login()">Iniciar Sesion</ion-button>
-          </ion-item>
-        </ion-list>
-      </form>
-    </div>
-  </div>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="ion-justify-content-center" size="10">
+        <ion-title>Iniciar Sesion</ion-title>
+        <form class="ion-margin-top" (submit)="login()">
+          <ion-list>
+            <ion-item>
+              <ion-label position="floating" name="mail">Correo</ion-label>
+              <ion-input required name="mail" [(ngModel)]="credentials.user" type="email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label name="password" position="floating">Contraseña</ion-label>
+              <ion-input required name="password" [(ngModel)]="credentials.password" type="password">
+              </ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-button (click)="login()">Iniciar Sesion</ion-button>
+            </ion-item>
+          </ion-list>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

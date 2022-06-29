@@ -3,16 +3,12 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="ultra"></ion-back-button>
     </ion-buttons>
-
   </ion-toolbar>
 </ion-header>
-<ion-content [scrollEvents]="true" (ionScrollStart)="logScrollStart()" (ionScroll)="logScrolling($event)"
-  (ionScrollEnd)="logScrollEnd()">
-
+<ion-content>
+  <ion-title>Usuarios</ion-title>
   <ion-list>
-    <ion-title class="ion-justify-content-center">Usuarios</ion-title>
     <ion-item-sliding *ngFor="let user of users">
-
       <ion-item lines="inset" button [routerLink]="['/edit-user', user.uid]">
         <ion-label>
           <h1>Nombre y Apellido: {{user.Name}} {{user.lastname}}</h1>
@@ -20,7 +16,6 @@
           <p>Rol: {{user.perfil}}</p>
         </ion-label>
       </ion-item>
-
     </ion-item-sliding>
   </ion-list>
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
