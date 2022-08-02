@@ -30,15 +30,16 @@ export class InventoryPage implements OnInit {
         this.getDataUser(res.uid)
       } else {
         console.log("no login")
+        res.uid = null;
         this.login = true
         this.route.navigate([''])
       }
     })
   }
 
- async ngOnInit() {
+  async ngOnInit() {
     await this.inter.presentLoadingOnly();
-    await this.prod.getProducts().subscribe(answer => {
+    this.prod.getProducts().subscribe(answer => {
       this.products = answer;
       this.inter.dismissLoading();
       this.sProduct = this.data;

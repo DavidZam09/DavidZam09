@@ -14,6 +14,7 @@ export class HomePage {
   data: User;
   login: boolean = false;
   rol: 'Usuario' | 'Administrador' = null;
+
   constructor(private auth: AuthService,
     private interaction: InteractionService,
     private rute: Router, private bd: DbService) {
@@ -24,14 +25,14 @@ export class HomePage {
         this.getDataUser(res.uid)
       } else {
         this.login = true
-        this.rute.navigate([''])
+        this.rute.navigateByUrl('/', { skipLocationChange: true });
       }
     })
   }
   logout() {
     this.auth.logout();
     this.interaction.presentToast('logout');
-    this.rute.navigate([''])
+    this.rute.navigateByUrl('/', { skipLocationChange: true });
   }
   getDataUser(uid: string) {
     const path = "users/";

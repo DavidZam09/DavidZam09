@@ -5,6 +5,7 @@ export interface Product {
     price: number,
     stocks: number,
     purchased: number,
+    gl: number,
     city: 'Bogota' | 'Cali' | 'Cali-Bogota'
 }
 

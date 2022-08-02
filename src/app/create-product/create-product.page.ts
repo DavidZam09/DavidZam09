@@ -20,7 +20,8 @@ export class CreateProductPage implements OnInit {
     stocks: null,
     price: null,
     purchased: null,
-    city: null
+    city: null,
+    gl: null
   }
 
   private ruter = 'products/';

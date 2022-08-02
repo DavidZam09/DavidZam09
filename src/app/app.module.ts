@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { IonicModule, IonicRouteStrategy, isPlatform } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -12,12 +12,17 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { ServiceWorkerModule } from '@angular/service-worker';
-
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(),
+  imports: [BrowserModule, IonicModule.forRoot({
+    rippleEffect: false,
+    mode: 'md',
+    backButtonText: 'Atras',
+    animated: !isPlatform('mobileweb')
+  }), ScrollingModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     provideAuth(() => getAuth()), provideFirestore(() => getFirestore()),

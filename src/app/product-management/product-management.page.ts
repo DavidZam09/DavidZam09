@@ -12,7 +12,7 @@ import { DbService } from '../services/db.service';
 })
 export class ProductManagementPage implements OnInit {
   data: Product = {
-    id: '', nameProd: '', shop: '', price: null, city: null, purchased: null, stocks: null
+    id: '', nameProd: '', shop: '', price: null, city: null, purchased: null, stocks: null, gl: null
   }
   cities = Cities;
   ruter = 'products/'

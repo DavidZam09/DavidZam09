@@ -2,7 +2,6 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="ultra"></ion-back-button>
-      <ion-label>Volver</ion-label>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -27,7 +26,11 @@
         <ion-label position="floating">Comprados</ion-label>
         <ion-input required [(ngModel)]="data.purchased" name="purchased" type="number"></ion-input>
       </ion-item>
-      <ion-item>
+        <ion-item>
+          <ion-label position="floating">Gramo/litros</ion-label>
+          <ion-input required [(ngModel)]="data.gl" name="gl" type="number"></ion-input>
+        </ion-item>
+        <ion-item>
         <ion-label>Ciudad</ion-label>
         <ion-select required [(ngModel)]="data.city" name="city" okText="Aceptar" cancelText="Cancelar">
           <ion-select-option *ngFor="let city of cities" [value]="city">{{city}}</ion-select-option>

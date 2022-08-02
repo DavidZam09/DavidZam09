@@ -2,7 +2,6 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="ultra"></ion-back-button>
-      <ion-label>Volver</ion-label>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -33,6 +32,10 @@
         <ion-item *ngIf="data">
           <ion-label position="floating">Existencias</ion-label>
           <ion-input required [(ngModel)]="data.stocks" name="stocks" type="number"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="data">
+          <ion-label position="floating">Gramo/litros</ion-label>
+          <ion-input required [(ngModel)]="data.gl" name="gl" type="number"></ion-input>
         </ion-item>
         <ion-item *ngIf="data">
           <ion-label>Ciudad</ion-label>
